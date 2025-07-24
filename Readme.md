@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Арсен Муслимов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2590827).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Сайт: [Мой проект Седона](https://themidnightdev404.github.io/2590827-sedona-2/).
 
 ---
 
