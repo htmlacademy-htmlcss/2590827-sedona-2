@@ -176,7 +176,7 @@ a {
 
 .button--color-transparent {
   background-color: transparent;
-  color: var(--color-black);
+  color: var(--color-extra);
   border: 1px solid transparent;
 }
 
