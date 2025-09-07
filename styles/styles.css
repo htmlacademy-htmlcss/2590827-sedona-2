@@ -346,15 +346,15 @@ a {
 }
 
 .services__icon--home {
-  background-image: url("/images/icons/advantage-home.svg");
+  background-image: url("../images/icons/advantage-home.svg");
 }
 
 .services__icon--food {
-  background-image: url("/images/icons/advantage-burger.svg");
+  background-image: url("../images/icons/advantage-burger.svg");
 }
 
 .services__icon--souvenir {
-  background-image: url("/images/icons/advantage-souvenir.svg");
+  background-image: url("../images/icons/advantage-souvenir.svg");
 }
 
 .services__list {
@@ -577,7 +577,7 @@ a {
 .product-card__stars {
   margin: 0;
   height: 17px;
-  background-image: url("/images/icons/star.svg");
+  background-image: url("../images/icons/star.svg");
   background-repeat: space;
 }
 
