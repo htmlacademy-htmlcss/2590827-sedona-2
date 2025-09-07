@@ -454,10 +454,36 @@ a {
 }
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
   gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   color: var(--color-extra);
-  list-style-type: none;
 }
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+  margin-right: 10px;
+  background: url("../images/icons/breadcrumbs-arrow.svg") no-repeat center / contain;
+}
+
+.breadcrumbs__link--back-home {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/breadcrumbs-home.svg") no-repeat center / contain;
+}
+
 
 
 .filter-form {
@@ -484,11 +510,23 @@ a {
 
 
 .select-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-size: 18px;
+
+  width: 310px;
+  box-sizing: border-box;
   padding: 14px 20px;
   border: 2px solid #E5E5E5;
+  border-radius: 4px;
   font-weight: 400;
   background-color: var(--color-extra);
   color: var(--color-text);
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
 }
 
 
@@ -523,20 +561,35 @@ a {
   width: 48px;
   height: 48px;
   padding: 14px 12px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--color-gray-light);
+
+  border: 2px solid var(--color-gray-light);
+  border-radius: 4px;
   background-color: var(--color-extra);
   cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 14px;
 }
 
 .view-toggle__button--active {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-image: url("../images/icons/view-grid.svg");
+  border: 2px solid var(--color-black);
+  border-radius: 4px;
   color: var(--color-extra);
 }
 
+.view-toggle__button--fullscreen {
+  background-image: url("../images/icons/view-fullscreen.svg");
+}
+
+.view-toggle__button--list {
+  background-image: url("../images/icons/view-list.svg");
+}
 
 .product-list {
   display: grid;
@@ -635,8 +688,8 @@ a {
 }
 
 .pagination__link {
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
