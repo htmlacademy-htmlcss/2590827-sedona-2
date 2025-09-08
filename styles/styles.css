@@ -258,7 +258,7 @@ a {
   text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
-  color: var(--color-black)
+  color: var(--color-black);
 }
 
 .advantages-intro__subtitle {
@@ -345,7 +345,6 @@ a {
   background-color: var(--color-accent);
 }
 
-
 .services__title {
   font-size: 30px;
   line-height: 36px;
@@ -408,6 +407,7 @@ a {
 }
 
 .hotel-search__title {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -415,6 +415,12 @@ a {
   color: var(--color-black)
 }
 
+.hotel-search__subtitle {
+  font-size: 22px;
+  color: var(--color-text);
+  padding-top: 0;
+  padding-bottom: 54px;
+}
 
 .subscribe {
   padding: 96px 258px 104px;
@@ -432,11 +438,14 @@ a {
 }
 
 .subscribe__title {
+  font-size: 30px;
+  line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .subscribe__subtitle {
+  margin-bottom: 54px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -754,6 +763,7 @@ a {
   padding: 40px 70px 30px;
   width: 1060px;
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -763,7 +773,10 @@ a {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  padding: 0;
+  max-width: 160px;
+  padding: 1px 10px;
+  margin: 0;
+  gap: 10px;
 }
 
 .page-footer__social-link--vkontakte {
@@ -781,4 +794,5 @@ a {
 .page-footer__contacts-phone {
   font-weight: 400;
   font-size: 40px;
+  line-height: 40px;
 }
