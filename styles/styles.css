@@ -29,7 +29,6 @@
   font-display: swap;
 }
 
-
 html {
   height: 100%;
 }
@@ -247,7 +246,7 @@ a {
 
 .advantages-intro {
   padding: 69px 0;
-  margin-bottom: 21px;
+  margin-bottom: 0;
 }
 
 .advantages-intro__title {
@@ -311,10 +310,12 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
+  background-color: var(--color-accent);
+  color: var(--color-extra);
 }
 
 .advantages__item-wrapper {
-  padding: 103px 85px;
+  padding: 75px 85px;
 }
 
 .advantages__list,
@@ -327,25 +328,23 @@ a {
 }
 
 .advantages__item--primary {
+  padding-top: 10px;
   background-color: var(--color-primary);
 }
 
 .advantages__item--secondary {
+  padding-top: 10px;
   background-color: var(--color-secondary);
-}
-
-.advantages__item--accent {
-  background-color: var(--color-accent);
-  color: var(--color-extra);
 }
 
 .advantages__item-image {
   display: block;
-  height: auto;
   background-color: var(--color-accent);
 }
 
 .services__title {
+  padding-top: 16px;
+  margin: 64px auto 20px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -355,6 +354,7 @@ a {
 }
 
 .services__subtitle {
+  margin-bottom: 64px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -365,11 +365,13 @@ a {
   display: block;
   width: 75px;
   height: 72px;
-  margin: 0 auto 16px;
+  margin: 0 auto 30px;
   background: no-repeat center/contain;
 }
 
 .services__icon--home {
+  width: 75px;
+  height: 72px;
   background-image: url("../images/icons/advantage-home.svg");
 }
 
@@ -385,8 +387,9 @@ a {
   text-align: center;
 }
 
-.services__item--primary {
-  background-color: var(--color-primary);
+.services__item--secondary {
+  min-height: 385px;
+  background-color: var(--color-secondary);
 }
 
 .services__item--extra {
@@ -394,12 +397,11 @@ a {
 }
 
 .services__item-wrapper {
-  padding: 81px 85px;
+  padding: 84px 86px;
 }
 
-
 .hotel-search {
-  padding: 96px 304px;
+  padding: 78px 304px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -418,12 +420,12 @@ a {
 .hotel-search__subtitle {
   font-size: 22px;
   color: var(--color-text);
-  padding-top: 0;
-  padding-bottom: 54px;
+  padding-top: 5px;
+  padding-bottom: 36px;
 }
 
 .subscribe {
-  padding: 96px 258px 104px;
+  padding: 85px 258px 104px;
   text-align: center;
   color: var(--color-black);
   background-image: none;
@@ -762,8 +764,7 @@ a {
 .page-footer {
   padding: 40px 70px 30px;
   width: 1060px;
-  margin: 0 auto;
-
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -771,7 +772,7 @@ a {
 
 .page-footer__social-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   list-style-type: none;
   max-width: 160px;
   padding: 1px 10px;

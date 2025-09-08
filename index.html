@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - небольшой город в Аризоне</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -29,8 +30,9 @@
               </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--favorite" href="#">
-                <img class="navigation__icon" src="images/icons/heart.svg">
+              <a class="navigation__link navigation__link--favorite" href="#" aria-label="Избранное: 12 элементов">
+                <img class="navigation__icon" src="images/icons/heart.svg" width="20" height="20" alt=""
+                  aria-hidden="true">
                 <span class="visually-hidden">Избранное</span>
                 <span class="navigation__count-badge">12</span>
               </a>
@@ -46,7 +48,7 @@
         <section class="hero" data-test="hero">
           <div class="hero__welcome">
             <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-            <img class="hero__img" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+            <img class="hero__img" src="images/welcome.svg" width="458" height="352" alt="" aria-hidden="true">
           </div>
         </section>
 
@@ -59,11 +61,12 @@
         </section>
 
         <section class="advantages" data-test="advantages">
+          <h2 class="visually-hidden">Преимущества Седоны</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--accent">
               <div class="advantages__item-wrapper">
                 <h3 class="advantages__item-title section-title section-title--light">Настоящий городок</h3>
-                <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Седона — не аттракцион для
+                <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Седона — не аттракцион для<br>
                   туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages__item-image" src="images/city.jpg" width="800" height="385"
@@ -91,7 +94,7 @@
             <li class="advantages__item advantages__item--accent">
               <img class="advantages__item-image" src="images/bridge.jpg" width="800" height="385" alt="Мост дьявола">
               <div class="advantages__item-wrapper">
-                <h3 class="advantages__item-title section-title section-title--light">Там есть мост дьявола</h3>
+                <h3 class="advantages__item-title section-title section-title--light">Там есть<br> мост дьявола</h3>
                 <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Да, по нему можно пройти!
                   Если вы осмелитесь, разумеется</p>
               </div>
@@ -103,7 +106,7 @@
           <h2 class="services__title">Приезжайте в Седону отдохнуть<br> в комфорте и уюте!</h2>
           <p class="services__subtitle">Опытный персонал и качественное обслуживание!</p>
           <ul class="services__list">
-            <li class="services__item services__item--primary">
+            <li class="services__item services__item--secondary">
               <div class="services__item-wrapper">
                 <span class="services__icon services__icon--home" aria-hidden="true"></span>
                 <h3 class="services__item-title section-title">Жильё</h3>
@@ -115,11 +118,12 @@
               <div class="services__item-wrapper">
                 <span class="services__icon services__icon--food" aria-hidden="true"></span>
                 <h3 class="services__item-title section-title">Еда</h3>
-                <p class="services__item-subtitle section-subtitle">Всегда заказывайте<br> топовый фирменный бургер, вы не
+                <p class="services__item-subtitle section-subtitle">Всегда заказывайте<br> топовый фирменный бургер, вы
+                  не
                   разочаруетесь!</p>
               </div>
             </li>
-            <li class="services__item services__item--primary">
+            <li class="services__item services__item--secondary">
               <div class="services__item-wrapper">
                 <span class="services__icon services__icon--souvenir" aria-hidden="true"></span>
                 <h3 class="services__item-title section-title">Сувениры</h3>
@@ -144,7 +148,7 @@
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
             <input class="subscribe__input" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail"
-              required>
+              required inputmode="email" autocomplete="email">
             <button class="button subscribe__button button--accent" type="submit">
               Подписаться
             </button>
@@ -158,20 +162,23 @@
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--vkontakte" href="https://vk.com/htmlacademy">
-                <img class="social__icon" src="images/icons/social-vkontakte.svg">
+                <img class="social__icon" src="images/icons/social-vkontakte.svg" width="24" height="24" alt=""
+                  aria-hidden="true">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--telegram" href="https://t.me/htmlacademy">
-                <img class="social__icon" src="images/icons/social-telegram.svg">
+                <img class="social__icon" src="images/icons/social-telegram.svg" width="24" height="24" alt=""
+                  aria-hidden="true">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--youtube"
                 href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social__icon" src="images/icons/social-youtube.svg">
+                <img class="social__icon" src="images/icons/social-youtube.svg" width="24" height="24" alt=""
+                  aria-hidden="true">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
