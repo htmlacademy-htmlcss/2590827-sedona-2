@@ -11,45 +11,44 @@
   <body>
     <div class="container">
       <header class="page-header" data-test="header">
-        <nav class="navigation">
+        <div class="header__navigation">
           <a class="navigation__logo-link" href="index.html">
             <img class="navigation__logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип Седона">
           </a>
+          <nav class="navigation">
 
-          <ul class="navigation__list navigation__list--main">
-            <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="about.html">О Седоне</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
-          </ul>
+            <ul class="navigation__list navigation__list--main">
+              <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="about.html">О Седоне</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
+            </ul>
 
-          <ul class="navigation__list navigation__list--user">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--search" href="#">
-                <img class="navigation__icon" src="images/icons/search.svg" alt="" aria-hidden="true">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--favorite" href="#" aria-label="Избранное: 12 элементов">
-                <img class="navigation__icon" src="images/icons/heart.svg" width="20" height="20" alt=""
-                  aria-hidden="true">
-                <span class="visually-hidden">Избранное</span>
-                <span class="navigation__count-badge">12</span>
-              </a>
-            </li>
-          </ul>
+            <ul class="navigation__list navigation__list--user">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--search" href="#">
+                  <img class="navigation__icon" src="images/icons/search.svg" alt="" aria-hidden="true">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--favorite" href="#" aria-label="Избранное: 12 элементов">
+                  <img class="navigation__icon" src="images/icons/heart.svg" width="20" height="20" alt=""
+                    aria-hidden="true">
+                  <span class="visually-hidden">Избранное</span>
+                  <span class="navigation__count-badge">12</span>
+                </a>
+              </li>
+            </ul>
 
+          </nav>
           <a class="navigation__button button button--brown" href="#">Хочу сюда!</a>
-        </nav>
-
+        </div>
       </header>
 
       <main class="main-index" data-test="main">
         <section class="hero" data-test="hero">
-          <div class="hero__welcome">
-            <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-            <img class="hero__img" src="images/welcome.svg" width="458" height="352" alt="" aria-hidden="true">
-          </div>
+          <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+          <img class="hero__img" src="images/welcome.svg" width="458" height="352" alt="" aria-hidden="true">
         </section>
 
         <section class="advantages-intro">
@@ -64,9 +63,10 @@
           <h2 class="visually-hidden">Преимущества Седоны</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--accent">
-              <div class="advantages__item-wrapper">
+              <div class="advantages__item-wrapper advantages__item-wrapper--accent">
                 <h3 class="advantages__item-title section-title section-title--light">Настоящий городок</h3>
-                <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Седона — не аттракцион для<br>
+                <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Седона — не аттракцион
+                  для<br>
                   туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages__item-image" src="images/city.jpg" width="800" height="385"
@@ -93,7 +93,7 @@
             </li>
             <li class="advantages__item advantages__item--accent">
               <img class="advantages__item-image" src="images/bridge.jpg" width="800" height="385" alt="Мост дьявола">
-              <div class="advantages__item-wrapper">
+              <div class="advantages__item-wrapper advantages__item-wrapper--accent">
                 <h3 class="advantages__item-title section-title section-title--light">Там есть<br> мост дьявола</h3>
                 <p class="advantages__item-subtitle section-subtitle section-subtitle--light">Да, по нему можно пройти!
                   Если вы осмелитесь, разумеется</p>
@@ -156,29 +156,30 @@
         </section>
       </main>
 
-      <footer class="page-footer" data-test="footer">
+      <footer class="footer" data-test="footer">
+        <div class="page-footer">
         <section class="page-footer__social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--vkontakte" href="https://vk.com/htmlacademy">
-                <img class="social__icon" src="images/icons/social-vkontakte.svg" width="24" height="24" alt=""
-                  aria-hidden="true">
+                <img class="page-footer__social-icon" src="images/icons/social-vkontakte.svg" width="24" height="14"
+                  alt="" aria-hidden="true">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--telegram" href="https://t.me/htmlacademy">
-                <img class="social__icon" src="images/icons/social-telegram.svg" width="24" height="24" alt=""
-                  aria-hidden="true">
+                <img class="page-footer__social-icon" src="images/icons/social-telegram.svg" width="18" height="16"
+                  alt="" aria-hidden="true">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--youtube"
                 href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social__icon" src="images/icons/social-youtube.svg" width="24" height="24" alt=""
-                  aria-hidden="true">
+                <img class="page-footer__social-icon" src="images/icons/social-youtube.svg" width="22" height="17"
+                  alt="" aria-hidden="true">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
@@ -198,6 +199,7 @@
             <span class="visually-hidden">Разработано в Html Academy</span>
           </a>
         </section>
+        </div>
       </footer>
     </div>
   </body>
