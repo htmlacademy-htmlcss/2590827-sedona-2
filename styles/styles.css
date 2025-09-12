@@ -85,46 +85,45 @@ a {
   background-color: var(--color-extra);
   min-height: 100vh;
   display: flex;
-  flex: 1;
   flex-direction: column;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 
 .page-header {
-  padding-right: 70px;
-  padding-left: 70px;
+  display: flex;
+  padding: 0 70px;
   color: var(--color-black);
 }
 
-.header__navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .navigation {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  position: relative;
 }
 
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   margin: 0;
   list-style-type: none;
   gap: 0;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0;
+  list-style: none;
 }
 
 .navigation__logo-link {
   display: flex;
-  position: relative;
+  position: absolute;
   z-index: 2;
-  align-items: center;
-  width: 140px;
-  margin-bottom: -6px;
+  min-width: 140px;
+  height: 64px;
 }
 
 .navigation__link {
@@ -132,18 +131,30 @@ a {
   display: block;
   padding: 20px 16px;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 24px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
 }
 
 .navigation__list--main {
-  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 169px;
+  list-style: none;
+  flex: 1;
 }
 
 .navigation__list--user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  margin: 0;
   padding: 0;
+  list-style: none;
   width: auto;
   gap: 0;
 }
@@ -170,8 +181,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
   min-width: 40px;
   min-height: 40px;
   padding: 0;
@@ -209,7 +218,7 @@ a {
 }
 
 .button {
-  display: inline-flex;
+  display: block;
   align-items: center;
   justify-content: center;
 
@@ -238,8 +247,10 @@ a {
 }
 
 .navigation__button {
-  margin-left: 24px;
+  align-self: center;
+  margin-left: 20px;
   padding: 8px 34px;
+  min-width: 92px;
 }
 
 .button--brown {
@@ -606,6 +617,7 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -631,6 +643,7 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   margin-left: 0;
+  color: var(--color-black)
 }
 
 .catalog-bar {
@@ -793,17 +806,11 @@ a {
   line-height: 28px;
 }
 
-.pagination-nav::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0;
-  border-top: 1px solid #e5e5e5;
-  padding-bottom: 40px;
-}
 
 .pagination-nav {
   margin-bottom: 60px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 40px;
 }
 
 .pagination {
