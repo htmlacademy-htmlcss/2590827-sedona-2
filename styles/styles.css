@@ -1,33 +1,40 @@
 :root {
-  --color-accent: rgb(130 179 211);
-  /* голубой */
-  --color-accent-hover: rgb(104 162 202);
-  /* голубой hover (#68A2CA) */
-  --color-accent-30: rgb(104 162 202 / 0.302);
-  /* голубой 30% (#68A2CA4D) */
-  --color-primary: rgb(131 179 211 / 0.2);
-  /* голубой 20% */
-  --color-secondary: rgb(131 179 211 / 0.12);
-  /* голубой 12% */
-  --color-extra: rgb(255 255 255);
-  /* белый */
-  --color-white-30: rgb(255 255 255 / 0.302);
-  /* белый 30% */
-  --color-dark: rgb(117 97 87);
-  /* коричнево-серый */
-  --color-black: rgb(0 0 0);
-  /* чёрный */
-  --color-black-30: rgb(0 0 0 / 0.302);
-  /* чёрный 30% */
-  --color-text: rgb(51 51 51);
-  /* тёмно-серый */
-  --color-gray-light: rgb(242 242 242);
-  /* светло-серый */
-  --color-green: rgb(125 181 79);
-  /* зелёный */
+  /* Голубой */
+  --color-accent: rgb(130 179 211);            /* base #82B3D3 */
+  --color-accent-hover: rgb(104 162 202);      /* hover #68A2CA */
+  --color-accent-active: #82B3D3;              /* active */
+
+  /* Полупрозрачные варианты */
+  --color-accent-30: rgb(104 162 202 / 0.302); /* голубой 30% (#68A2CA4D) */
+  --color-white-30: rgb(255 255 255 / 0.302);  /* белый 30% */
+  --color-black-30: rgb(0 0 0 / 0.302);        /* чёрный 30% */
+
+  /* Доп. фоны */
+  --color-primary: rgb(131 179 211 / 0.2);     /* голубой 20% */
+  --color-secondary: rgb(131 179 211 / 0.12);  /* голубой 12% */
+
+  /* Базовые */
+  --color-extra: rgb(255 255 255);             /* белый */
+  --color-black: rgb(0 0 0);                   /* чёрный */
+  --color-text: rgb(51 51 51);                 /* текст #333 */
+  --color-gray-light: rgb(242 242 242);        /* светло-серый фон */
+
+  /* Коричневые */
+  --color-dark: rgb(117 97 87);                /* коричневый #756157 */
+  --color-brown-dark: #615048;                 /* hover для brown */
+  --color-dark-30: #7561574D;                  /* 30% для active */
+
+  /* Зелёные */
+  --color-green: rgb(125 181 79);              /* зелёный base #7DB54F */
+  --color-green-hover: #6C9E42;                /* hover */
+
+  /* Бордеры и тени */
+  --color-border: #E5E5E5;                     /* основной бордер */
+  --color-border-muted: #E6E6E6;               /* бордер карточек */
+  --shadow-20: rgb(0 0 0 / 0.2);               /* тень 20% */
+
   --star-size: 22px;
 }
-
 
 @font-face {
   font-family: "PT Sans";
@@ -44,8 +51,6 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-
-
 
 img {
   max-width: 100%;
@@ -91,16 +96,14 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 var(--shadow-20);
 }
-
 
 .page-header {
   display: flex;
   padding: 0 70px;
   color: var(--color-black);
 }
-
 
 .navigation {
   flex-grow: 1;
@@ -191,7 +194,6 @@ a {
   padding: 0;
 }
 
-
 .hero {
   position: relative;
   background-color: var(--color-accent);
@@ -274,7 +276,6 @@ a {
   line-height: 36px;
 }
 
-
 .section-title {
   font-size: 30px;
   line-height: 36px;
@@ -296,7 +297,6 @@ a {
 .section-subtitle--light {
   color: var(--color-extra);
 }
-
 
 .advantages-intro {
   padding-top: 69px;
@@ -599,8 +599,6 @@ a {
   background: url("../images/icons/breadcrumbs-home.svg") no-repeat center / contain;
 }
 
-
-
 .filter-form {
   display: flex;
   flex-wrap: nowrap;
@@ -610,6 +608,7 @@ a {
 }
 
 .filter-form__group {
+  display: flex;
   justify-content: space-between;
   gap: 32px;
 }
@@ -635,7 +634,7 @@ a {
   min-width: 292px;
   box-sizing: border-box;
   padding: 12px 18px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--color-border);
   border-radius: 4px;
   background-color: var(--color-extra);
   color: var(--color-text);
@@ -680,7 +679,7 @@ a {
   justify-content: center;
   align-items: center;
 
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--color-border);
   border-radius: 4px;
   background-color: var(--color-extra);
   cursor: pointer;
@@ -719,7 +718,7 @@ a {
   flex-direction: column;
 
   gap: 16px;
-  border: 1px solid #E6E6E6;
+  border: 1px solid var(--color-border-muted);
   border-radius: 4px;
   padding: 19px;
 }
@@ -755,7 +754,6 @@ a {
 
 .product-card__stars {
   margin: 0;
-  width: 18px;
   height: 17px;
   background-image: url("../images/icons/star.svg");
   background-repeat: space;
@@ -818,10 +816,9 @@ a {
   line-height: 28px;
 }
 
-
 .pagination-nav {
   margin-bottom: 60px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--color-border);
   padding-top: 40px;
 }
 
@@ -851,11 +848,13 @@ a {
 .pagination__link--current {
   background-color: var(--color-gray-light);
   color: var(--color-black);
+  pointer-events: none;
 }
 
 .pagination__link--dots {
   background-color: transparent;
   color: var(--color-black);
+  pointer-events: none;
 }
 
 .page-footer {
@@ -908,32 +907,32 @@ a {
 }
 
 .page-footer__contacts-phone:hover {
-  color: #756157;
+  color: var(--color-dark);
 }
 
 .page-footer__contacts-phone:active {
-  color: #7561574D;
+  color: var(--color-dark-30);
 }
 
 .page-footer__contacts-phone:focus-visible {
-  color: #756157;
+  color: var(--color-dark);
 }
 
 .page-footer__copyright-link:hover svg path {
-  fill: #756157;
+  fill: var(--color-dark);
 }
 
 .page-footer__copyright-link:active svg path {
-  fill: #7561574D;
+  fill: var(--color-dark-30);
 }
 
 .pagination__link:hover {
-  background-color: #68A2CA;
+  background-color: var(--color-accent-hover);
 }
 
 .pagination__link:active {
-  background-color: #82B3D3;
-  color: #FFFFFF4D;
+  background-color: var(--color-accent-active);
+  color: var(--color-white-30);
 }
 
 .view-toggle__button:hover {
@@ -959,67 +958,67 @@ a {
 }
 
 .select-control:disabled {
-  border-color: #0000004D;
-  background-color: #0000004D;
-  color: #0000004D;
+  border-color: var(--color-black-30);
+  background-color: var(--color-black-30);
+  color: var(--color-black-30);
   cursor: not-allowed;
 }
 
 .button--brown:hover {
-  background-color: #615048;
+  background-color: var(--color-brown-dark);
 }
 
 .button--brown:focus-visible {
-  background-color: #615048;
+  background-color: var(--color-brown-dark);
 }
 
 .button--brown:active {
-  background-color: #756157;
-  color: #FFFFFF4D;
+  background-color: var(--color-dark);
+  color: var(--color-white-30);
 }
 
 .button--brown:disabled {
-  background-color: #E5E5E5;
-  color: #FFFFFF;
+  background-color: var(--color-border);
+  color: var(--color-extra);
 }
 
 .button--accent:hover {
-  background-color: #68A2CA;
+  background-color: var(--color-accent-hover);
 }
 
 .button--accent:focus-visible {
-  background-color: #68A2CA;
+  background-color: var(--color-accent-hover);
 }
 
 .button--accent:active {
-  background-color: #82B3D3;
-  color: #FFFFFF4D;
+  background-color: var(--color-accent-active);
+  color: var(--color-white-30);
 }
 
 .button--accent:disabled {
-  background-color: #E5E5E5;
-  color: #FFFFFF;
+  background-color: var(--color-border);
+  color: var(--color-extra);
 }
 
 .button--green:hover {
-  background-color: #6C9E42;
+  background-color: var(--color-green-hover);
 }
 
 .button--green:focus-visible {
-  background-color: #6C9E42;
+  background-color: var(--color-green-hover);
 }
 
 .button--green:active {
-  background-color: #7DB54F;
-  color: #FFFFFF4D;
+  background-color: var(--color-green);
+  color: var(--color-white-30);
 }
 
-.button--green:active {
-  background-color: #E5E5E5;
-  color: #FFFFFF;
+.button--green:disabled {
+  background-color: var(--color-border);
+  color: var(--color-extra);
 }
 
 .button--transparent:focus-visible {
-  border: 3px solid #83B3D3;
+  border: 3px solid var(--color-accent);
   outline: none;
 }
