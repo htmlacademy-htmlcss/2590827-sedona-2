@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - небольшой город в Аризоне</title>
-    <link rel="icon" href="/images/favicon.png" type="image/png+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -16,24 +16,25 @@
         <a class="navigation__logo-link" href="index.html">
           <img class="navigation__logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип Седона">
         </a>
-        <nav class="navigation">
+        <nav class="navigation" aria-label="Основная навигация">
 
           <ul class="navigation__list navigation__list--main">
-            <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
+            <li class="navigation__item"><a class="navigation__link"
+                href="index.html">Главная</a></li>
             <li class="navigation__item"><a class="navigation__link" href="about.html">О Седоне</a></li>
-            <li class="navigation__item"><a class="navigation__link navigation__link--current"
-                href="catalog.html">Гостиницы</a></li>
+            <li class="navigation__item"><a class="navigation__link navigation__link--current" href="catalog.html">Гостиницы</a></li>
           </ul>
 
           <ul class="navigation__list navigation__list--user">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--search" href="#">
+              <a class="navigation__link navigation__link--search" href="#" aria-label="Перейти на страницу поиска">
                 <img class="navigation__icon" src="images/icons/search.svg" alt="" aria-hidden="true">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--favorite" href="#" aria-label="Избранное: 12 элементов">
+              <a class="navigation__link navigation__link--favorite" href="#"
+                aria-label="Перейти на страницу избранного. Количество элементов: 12">
                 <img class="navigation__icon" src="images/icons/heart.svg" width="20" height="20" alt=""
                   aria-hidden="true">
                 <span class="visually-hidden">Избранное</span>
@@ -62,7 +63,7 @@
           </ul>
 
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
-            <fieldset class="filter-form__group">
+            <fieldset class="filter-form__group filter-form__group--checkbox">
               <legend class="filter-form__title">Инфраструктура:</legend>
               <ul class="filter-form__list">
                 <li class="filter-form__item">
@@ -88,13 +89,13 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-form__group">
-              <legend class="filter-form__title">Тип жилья:</legend>
+            <fieldset class="filter-form__group filter-form__group--radio">
+              <legend class="filter-form__title">Тип Жилья:</legend>
               <ul class="filter-form__list">
                 <li class="filter-form__item">
                   <label class="filter-form__control">
                     <input class="filter-form__control-input" type="radio" name="housing-group" value="hotels" checked>
-                    Гостиницы
+                    Гостиница
                   </label>
                 </li>
                 <li class="filter-form__item">
@@ -117,17 +118,17 @@
               <div class="filter-form__range range">
                 <div class="range-inputs">
                   <label class="range-inputs__label range-inputs__label--min">
-                    <input class="input" type="number" name="min" value="0" placeholder="от" min="0" step="100"
+                    <input class="input input--min" type="number" name="min" value="0" placeholder="от" min="0" step="100"
                       inputmode="numeric">
                     <span>от</span>
                   </label>
                   <label class="range-inputs__label range-inputs__label--max">
-                    <input class="input" type="number" name="max" value="9000" min="0" step="100" inputmode="numeric">
+                    <input class="input input--max" type="number" name="max" value="9000" min="0" step="100" inputmode="numeric">
                     <span>до</span>
                   </label>
                 </div>
                 <div class="range-scale">
-                  <div class="range-scale__bar" style="left: 0; width: 226px;">
+                  <div class="range-scale__bar">
                     <button class="range-scale__toggle range-scale__toggle--min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
