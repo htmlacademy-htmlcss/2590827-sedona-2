@@ -138,7 +138,8 @@
           <h3 class="hotel-search__title">Заинтересовались?</h3>
           <p class="hotel-search__subtitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <a class="button button--brown button--large" href="#modal">Поиск гостиницы в Седоне</a>
+          <a class="button button--brown button--large"
+            onclick="document.querySelector('#modal-search').showModal()">Поиск гостиницы в Седоне</a>
         </section>
 
         <section class="subscribe subscribe--light" data-test="subscribe">
@@ -210,6 +211,80 @@
           </section>
         </div>
       </footer>
+
+      <dialog class="modal" id="modal-search" aria-labelledby="modal-title">
+        <section class="modal__window">
+          <form method="dialog" class="modal__header">
+            <button class="modal__close" aria-label="Закрыть"></button>
+          </form>
+
+          <h2 class="modal__title" id="modal-title">Поиск гостиницы в Седоне</h2>
+
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get" novalidate>
+            <fieldset class="modal-form__group">
+              <label class="modal-form__label" for="check-in">
+                <span class="modal-form__label-text">Дата Заезда:</span>
+              </label>
+              <input class="modal-form__input modal-form__input--date" id="check-in" name="check-in" type="text"
+                placeholder="27 апреля 2020" required>
+              <p class="modal-form__hint modal-form__hint--error" aria-live="polite">
+                Мы не можем отправить вас в прошлое.
+              </p>
+            </fieldset>
+
+            <fieldset class="modal-form__group">
+              <label class="modal-form__label" for="check-out">
+                <span class="modal-form__label-text modal-form__label-text--out">Дата Выезда:</span>
+              </label>
+              <input class="modal-form__input modal-form__input--date" id="check-out" name="check-out" type="text"
+                placeholder="1 сентября 2023" required>
+              <p class="modal-form__hint" aria-live="polite">
+                На эти даты есть свободные номера. Пока есть.
+              </p>
+            </fieldset>
+
+            <fieldset class="modal-form__group modal-form__group--row">
+              <div class="counter">
+                <label class="counter__label" for="adults">Взрослые:</label>
+                <div class="counter__controls">
+                  <button class="counter__btn counter__btn--minus" type="button" aria-label="Убавить взрослых"
+                    disabled>−</button>
+                  <input class="counter__input" id="adults" name="adults" type="number" min="1" max="10" value="2"
+                    inputmode="numeric">
+                  <button class="counter__btn counter__btn--plus" type="button" aria-label="Добавить взрослых"
+                    disabled>+</button>
+                </div>
+              </div>
+
+              <div class="counter">
+                <div class="counter__label-wrap">
+                  <label class="counter__label" for="kids">Дети:</label>
+                  <button class="info-btn" type="button" aria-describedby="kids-tip" tabindex="-1">i</button>
+                  <span class="tooltip" role="tooltip" id="kids-tip">
+                    Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </div>
+                <div class="counter__controls">
+                  <button class="counter__btn counter__btn--minus" type="button" aria-label="Убавить детей"
+                    disabled>−</button>
+                  <input class="counter__input" id="kids" name="kids" type="number" min="0" max="10" value="0"
+                    inputmode="numeric">
+                  <button class="counter__btn counter__btn--plus" type="button" aria-label="Добавить детей"
+                    disabled>+</button>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="modal-form__submit button button--second-color" type="submit">Найти</button>
+          </form>
+        </section>
+      </dialog>
+
+
+      </form>
+      </section>
+    </div>
 
     </div>
   </body>

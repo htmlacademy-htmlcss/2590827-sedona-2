@@ -8,12 +8,16 @@
   --color-white-10: rgb(255 255 255 / 0.1);
 
   /* Голубой */
-  --color-accent: rgb(130 179 211);            /* base #82B3D3 */
-  --color-accent-hover: rgb(104 162 202);      /* hover #68A2CA */
-  --color-accent-active: #82B3D3;              /* active */
+  --color-accent: rgb(130 179 211);
+  /* base #82B3D3 */
+  --color-accent-hover: rgb(104 162 202);
+  /* hover #68A2CA */
+  --color-accent-active: #82B3D3;
+  /* active */
 
   /* Полупрозрачные варианты */
-  --color-accent-30: rgb(104 162 202 / 0.3);   /* голубой 30% */
+  --color-accent-30: rgb(104 162 202 / 0.3);
+  /* голубой 30% */
 
   /* Чёрный */
   --color-black: rgb(0 0 0);
@@ -24,27 +28,40 @@
   --color-black-10: rgb(0 0 0 / 0.1);
 
   /* Доп. фоны */
-  --color-primary: rgb(131 179 211 / 0.2);     /* голубой 20% */
-  --color-secondary: rgb(131 179 211 / 0.12);  /* голубой 12% */
+  --color-primary: rgb(131 179 211 / 0.2);
+  /* голубой 20% */
+  --color-secondary: rgb(131 179 211 / 0.12);
+  /* голубой 12% */
 
   /* Базовые */
-  --color-extra: rgb(255 255 255);             /* белый */
-  --color-text: rgb(51 51 51);                 /* текст #333 */
-  --color-gray-light: rgb(242 242 242);        /* светло-серый фон */
+  --color-extra: rgb(255 255 255);
+  /* белый */
+  --color-text: rgb(51 51 51);
+  /* текст #333 */
+  --color-gray-light: rgb(242 242 242);
+  /* светло-серый фон */
 
   /* Коричневые */
-  --color-dark: rgb(117 97 87);                /* коричневый #756157 */
-  --color-brown-dark: #615048;                 /* hover для brown */
-  --color-dark-30: #7561574D;                  /* 30% для active */
+  --color-dark: rgb(117 97 87);
+  /* коричневый #756157 */
+  --color-brown-dark: #615048;
+  /* hover для brown */
+  --color-dark-30: #7561574D;
+  /* 30% для active */
 
   /* Зелёные */
-  --color-green: rgb(125 181 79);              /* base #7DB54F */
-  --color-green-hover: #6C9E42;                /* hover */
+  --color-green: rgb(125 181 79);
+  /* base #7DB54F */
+  --color-green-hover: #6C9E42;
+  /* hover */
 
   /* Бордеры и тени */
-  --color-border: #E5E5E5;                     /* основной бордер */
-  --color-border-muted: #E6E6E6;               /* бордер карточек */
-  --shadow-20: rgb(0 0 0 / 0.2);               /* тень 20% */
+  --color-border: #E5E5E5;
+  /* основной бордер */
+  --color-border-muted: #E6E6E6;
+  /* бордер карточек */
+  --shadow-20: rgb(0 0 0 / 0.2);
+  /* тень 20% */
 
   /* Размеры */
   --star-size: 22px;
@@ -498,7 +515,7 @@ a {
 
 .hotel-search__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -535,8 +552,8 @@ a {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
-  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .subscribe__subtitle {
@@ -1240,4 +1257,217 @@ a {
 
 .button--transparent:active {
   opacity: 0.3;
+}
+
+dialog::backdrop {
+  background: #F2F2F2CC;
+}
+
+.modal {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.modal__window {
+  position: relative;
+  background: var(--color-white, #fff);
+  border-radius: 30px;
+  padding: 64px 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__close {
+  background: #F2F2F2 url("../images/icons/close-icon.svg") no-repeat center;
+  background-size: 20px 20px;
+  position: absolute;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  color: #000;
+  font-size: 20px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 64px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-form__group {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-form__label-text {
+  display: inline-block;
+  margin-right: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal-form__label-text--out {
+  margin-right: 18px;
+}
+
+.modal-form__input {
+  width: 377px;
+  padding: 12px 12px;
+  border: 2px solid #F2F2F2;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.modal-form__input--date {
+  background: url("../images/icons/calendar.svg") no-repeat right 12px center #F2F2F2;
+  background-size: 16px 15px;
+  padding-right: 40px;
+  cursor: text;
+}
+
+.modal-form__input--date::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.modal-form__hint {
+  padding: 0;
+  padding-left: 157px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.modal-form__hint--error {
+  color: #FF5A5A;
+}
+
+.modal-form__group--row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.counter {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.counter__label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 46px;
+}
+
+.counter__controls {
+  display: flex;
+  align-items: center;
+}
+
+.counter__btn {
+  width: 20px;
+  height: 48px;
+  border: none;
+  background: #F2F2F2;
+  font-size: 22px;
+  line-height: 1;
+  color: #000;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.counter__input {
+  flex: 1 1 auto;
+  height: 46px;
+  text-align: center;
+  background: #F2F2F2;
+  border: none;
+  font: inherit;
+  color: #333;
+}
+
+.counter__input:focus {
+  outline: none;
+  border-color: #B3B3B3;
+}
+
+.counter__label-wrap {
+  position: relative;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.info-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #83B3D3;
+  color: #fff;
+  font: 700 12px/1 Arial, sans-serif;
+  cursor: default;
+  display: inline-grid;
+  place-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  z-index: 2;
+  max-width: 240px;
+  padding: 12px 14px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.counter__label-wrap:hover .tooltip,
+.info-btn:focus + .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.modal-form__submit {
+  align-self: center;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
 }
