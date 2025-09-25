@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
-  <body>
+  <body class="is-modal-open">
     <div class="container">
       <header class="page-header" data-test="header"> <a class="navigation__logo-link" href="index.html" aria-current="page"> <img
             class="navigation__logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип Седона"> </a>
         <nav class="navigation" aria-label="Основная навигация">
           <ul class="navigation__list navigation__list--main">
             <li class="navigation__item"><a class="navigation__link navigation__link--current"
-                href="index.html" aria-current="page"аbutton class="find-form__tooltip-trigge">Главная</a></li>
+                href="index.html" aria-current="page">Главная</a></li>
             <li class="navigation__item"><a class="navigation__link" href="about.html">О Седоне</a></li>
             <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
           </ul>
@@ -24,7 +24,7 @@
             <li class="navigation__item"> <a class="navigation__link navigation__link--search" href="#"
                 aria-label="Перейти на страницу поиска"> <span class="visually-hidden">Поиск</span> <svg
                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true"
-                  focusable="false" viewBox="0 0 20 20">
+                  focusable="false" viewBox="0 0 20 20">>
                   <path
                     d="m19.5 18.0083-3.7-3.6796c1-1.2928 1.7-2.9834 1.7-4.8729 0-4.37569-3.6-7.9558-8-7.9558s-8 3.67956-8 8.05525c0 4.37565 3.6 7.95575 8 7.95575 1.8 0 3.5-.5966 4.9-1.6906L18.1 19.5l1.4-1.4917Zm-10-2.4862c-3.3 0-6-2.6851-6-5.96685 0-3.28177 2.7-5.96685 6-5.96685s6 2.68508 6 5.96685c0 3.28175-2.7 5.96685-6 5.96685Z" />
                 </svg> </a> </li>
@@ -115,9 +115,8 @@
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <h3 class="hotel-search__title">Заинтересовались?</h3>
           <p class="hotel-search__subtitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
-            гостиниц в Седоне</p> <a class="button button--brown button--large" href="modal.html">
-            Поиск гостиницы в Седоне
-          </a>
+            гостиниц в Седоне</p> <button class="button button--brown button--large" type="button"
+            onclick="document.querySelector('#modal-search').showModal()">Поиск гостиницы в Седоне</button>
         </section>
         <section class="subscribe subscribe--light" data-test="subscribe">
           <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
@@ -172,65 +171,114 @@
         </div>
       </footer>
     </div>
-    <div class="modal-overlay modal-overlay--hidden">
-      <div class="modal-panel"> <button class="modal-panel__close" type="button" aria-label="Закрыть"> <span
-            class="visually-hidden">Закрыть</span> <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path
-              d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" />
-          </svg> </button>
-        <section class="modal-panel__content" data-test="modal">
-          <h2 class="modal-panel__title">Поиск гостиницы в Седоне</h2>
-          <form class="find-form" action="https://echo.htmlacademy.ru/" method="get"> <!-- Дата заезда -->
-            <fieldset class="find-form__row"> <label class="find-form__control" for="check-in"> <span
-                  class="find-form__label find-form__label--with-icon">Дата Заезда:</span> <input
-                  class="find-form__input" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
-                  value="27 апреля 2020" required> <span
-                  class="find-form__hint find-form__hint--error find-form__hint--show"> Мы не можем отправить вас в
-                  прошлое. </span> </label> </fieldset> <!-- Дата выезда -->
-            <fieldset class="find-form__row"> <label class="find-form__control" for="check-out"> <span
-                  class="find-form__label find-form__label--wide find-form__label--with-icon">Дата Выезда:</span> <input
-                  class="find-form__input" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
-                  value="1 сентября 2023" required> <span class="find-form__hint find-form__hint--show"> На эти даты
-                  есть свободные номера. Пока есть. </span> </label> </fieldset> <!-- Счётчики -->
-            <fieldset class="find-form__row"> <!-- Взрослые -->
-              <div class="find-form__wrap"> <label class="find-form__control find-form__control--titled" for="adults">
-                  <span class="find-form__label find-form__label--gap">Взрослые:</span> </label> <button
-                  class="find-form__spinner-btn find-form__spinner-btn--minus" type="button" aria-label="Убрать гостя">
-                  <span class="visually-hidden">Убрать гостя</span> <svg width="14" height="2" viewBox="0 0 14 2"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M0 0v2h14V0H0Z" />
-                  </svg> </button> <input class="find-form__number" type="number" id="adults" name="adults-input"
-                  value="2"> <button class="find-form__spinner-btn find-form__spinner-btn--plus" type="button"
-                  aria-label="Добавить гостя"> <span class="visually-hidden">Добавить гостя</span> <svg width="14"
-                    height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
-                  </svg> </button> </div> <!-- Дети + тултип -->
-              <div class="find-form__wrap"> <label class="find-form__control find-form__control--titled" for="kids">
-                  <span class="find-form__label find-form__label--gap">Дети:</span> </label>
-                <div class="find-form__tooltip-wrap"> <button class="find-form__tooltip-trigger" type="button"
-                    aria-labelledby="tip-children"></button> <span class="find-form__tooltip" role="tooltip"
-                    id="tip-children"> Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
-                    Дети до 6 лет размещаются бесплатно. </span> </div> <button
-                  class="find-form__spinner-btn find-form__spinner-btn--minus" type="button"
-                  aria-label="Убрать маленького гостя"> <span class="visually-hidden">Убрать маленького гостя</span>
-                  <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M0 0v2h14V0H0Z" />
-                  </svg> </button> <input class="find-form__number" type="number" id="kids" name="kids-input" value="2">
-                <button class="find-form__spinner-btn find-form__spinner-btn--plus" type="button"
-                  aria-label="Добавить маленького гостя"> <span class="visually-hidden">Добавить маленького гостя</span>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg> </button>
+    <div class="modal-overlay" id="modal">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <a class="modal-panel__close" href="index.html" aria-label="Закрыть">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+          <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
+        </svg>
+      </a>
+
+      <section class="modal-panel__content" data-test="modal">
+        <h2 class="modal-panel__title" id="modal-title">Поиск гостиницы в Седоне</h2>
+
+        <form class="find-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="find-form__row">
+            <label class="find-form__control" for="check-in">
+              <span class="find-form__label find-form__label--with-icon">Дата Заезда:</span>
+              <input
+                class="find-form__input"
+                type="text"
+                id="check-in"
+                name="check-in"
+                placeholder="Укажите дату"
+                value="27 апреля 2020"
+                required
+              >
+              <span class="find-form__hint find-form__hint--error find-form__hint--show">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </label>
+          </fieldset>
+
+          <fieldset class="find-form__row">
+            <label class="find-form__control" for="check-out">
+              <span class="find-form__label find-form__label--wide find-form__label--with-icon">Дата Выезда:</span>
+              <input
+                class="find-form__input"
+                type="text"
+                id="check-out"
+                name="check-out"
+                placeholder="Укажите дату"
+                value="1 сентября 2023"
+                required
+              >
+              <span class="find-form__hint find-form__hint--show">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+            </label>
+          </fieldset>
+
+          <fieldset class="find-form__row">
+            <div class="find-form__wrap">
+              <label class="find-form__control find-form__control--titled" for="adults">
+                <span class="find-form__label find-form__label--gap">Взрослые:</span>
+              </label>
+
+              <button class="find-form__spinner-btn find-form__spinner-btn--minus" type="button" aria-label="Убрать гостя">
+                <span class="visually-hidden">Убрать гостя</span>
+                <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true">
+                  <path d="M0 0v2h14V0H0Z"/>
+                </svg>
+              </button>
+
+              <input class="find-form__number" type="number" id="adults" name="adults-input" value="2">
+
+              <button class="find-form__spinner-btn find-form__spinner-btn--plus" type="button" aria-label="Добавить гостя">
+                <span class="visually-hidden">Добавить гостя</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+                  <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="find-form__wrap">
+              <label class="find-form__control find-form__control--titled" for="kids">
+                <span class="find-form__label find-form__label--gap">Дети:</span>
+              </label>
+
+              <div class="find-form__tooltip-wrap">
+                <button class="find-form__tooltip-trigger" type="button" aria-labelledby="tip-children"></button>
+                <span class="find-form__tooltip" role="tooltip" id="tip-children">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.
+                </span>
               </div>
-            </fieldset> <button class="find-form__submit button button--accent" type="submit">Найти</button>
-          </form>
-        </section>
-      </div>
+
+              <button class="find-form__spinner-btn find-form__spinner-btn--minus" type="button" aria-label="Убрать маленького гостя">
+                <span class="visually-hidden">Убрать маленького гостя</span>
+                <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true">
+                  <path d="M0 0v2h14V0H0Z"/>
+                </svg>
+              </button>
+
+              <input class="find-form__number" type="number" id="kids" name="kids-input" value="2">
+
+              <button class="find-form__spinner-btn find-form__spinner-btn--plus" type="button" aria-label="Добавить маленького гостя">
+                <span class="visually-hidden">Добавить маленького гостя</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                </svg>
+              </button>
+            </div>
+          </fieldset>
+
+          <button class="find-form__submit button button--accent" type="submit">Найти</button>
+        </form>
+      </section>
     </div>
+  </div>
   </body>
 
 </html>
