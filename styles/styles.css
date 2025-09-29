@@ -911,7 +911,7 @@ a {
   line-height: 24px;
   display: block;
   position: relative;
-  width: 143px;
+  min-width: 103px;
   margin-right: 2px;
 }
 
@@ -929,9 +929,9 @@ a {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  width: 103px;
+  width: 78px;
   height: 24px;
-  padding: 12px 20px;
+  padding: 12px 45px 12px 20px;
   border: 0 solid transparent;
 }
 
@@ -1069,15 +1069,15 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   margin-left: 0;
-  color: var(--color-black);
   margin-right: auto;
+  color: var(--color-black);
+  padding-top: 6px;
 }
 
 .catalog-bar {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
   gap: 20px 70px;
   margin-bottom: 39px;
 }
@@ -1275,7 +1275,7 @@ a {
 }
 
 .pagination__link {
-  width: 58px;
+  min-width: 58px;
   height: 58px;
   display: inline-flex;
   justify-content: center;
@@ -1325,7 +1325,7 @@ a {
 
 .page-footer__social-list {
   display: flex;
-  max-width: 160px;
+  min-width: 142px;
   flex-wrap: wrap;
 }
 
@@ -1357,11 +1357,12 @@ a {
 }
 
 .page-footer__contacts-phone {
-  max-width: 700px;
+  min-width: 331px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   transition: background-color var(--tr-fast), color var(--tr-fast), box-shadow var(--tr-fast);
+  word-break: keep-all;
 }
 
 .page-footer__contacts-phone:hover {
@@ -1701,7 +1702,23 @@ a {
   -webkit-appearance: none;
 }
 
-/* Даты */
+.stay-finder__input--counter::placeholder {
+  color: var(--color-black);
+  opacity: 1;
+}
+
+.stay-finder__input--counter:hover::placeholder {
+  color: var(--color-black-50);
+}
+
+.stay-finder__input--counter:focus::placeholder {
+  color: var(--color-blue-100);
+}
+
+.stay-finder__input--counter:disabled::placeholder {
+  color: var(--color-black-10);
+}
+
 .stay-finder__date-row {
   position: relative;
   display: grid;
