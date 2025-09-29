@@ -1177,7 +1177,6 @@ a {
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
-
 }
 
 .product-card__button {
@@ -1275,11 +1274,14 @@ a {
 }
 
 .pagination__link {
-  min-width: 58px;
+  min-width: 50px;
   height: 58px;
+  padding: 0 4px;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   border: 1px solid transparent;
   border-radius: 4px;
   background-color: var(--color-blue-100);
@@ -1317,16 +1319,19 @@ a {
 }
 
 .page-footer {
-  padding: 46px 70px 33px;
+  padding: 44px 70px 33px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .page-footer__social-list {
-  display: flex;
-  min-width: 142px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 47px);
+  grid-auto-rows: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .page-footer__social-link {
@@ -1356,13 +1361,19 @@ a {
   fill: var(--color-blue-30);
 }
 
+.page-footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-footer__contacts-phone {
   min-width: 331px;
   font-weight: 400;
   font-size: 40px;
-  line-height: 40px;
-  transition: background-color var(--tr-fast), color var(--tr-fast), box-shadow var(--tr-fast);
-  word-break: keep-all;
+  line-height: 1.1;
+  transition: background-color var(--tr-fast), color var(--tr-fast);
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .page-footer__contacts-phone:hover {
